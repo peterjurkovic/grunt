@@ -33,7 +33,14 @@ module.exports = function (grunt) {
 
         concat : {
             js : {
-                src: ['js/angular.js', 'js/angular.js', 'js/**.js'],
+                src: ['js/angular.js', 'js/app.js', 'js/**.js'],
+                dest : 'build/app.js'
+            }
+        },
+
+        uglify : {
+            js : {
+                src: ['build/app.js'],
                 dest : 'build/app.js'
             }
         }
@@ -43,6 +50,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-stylus");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-concat");
+    grunt.loadNpmTasks("grunt-contrib-uglify");
 
     grunt.registerTask("build",  [] );
 
