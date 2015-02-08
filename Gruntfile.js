@@ -29,12 +29,20 @@ module.exports = function (grunt) {
                 tasks : ['reloadWatcher']
             }
 
+        },
+
+        concat : {
+            js : {
+                src: ['js/angular.js', 'js/angular.js', 'js/**.js'],
+                dest : 'build/app.js'
+            }
         }
 
     });
 
     grunt.loadNpmTasks("grunt-contrib-stylus");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-contrib-concat");
 
     grunt.registerTask("build",  [] );
 
