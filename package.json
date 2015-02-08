@@ -2,6 +2,7 @@
   "name": "demo-app",
   "version": "1.0.0",
   "devDependencies": {
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-stylus": "^0.20.0",
     "grunt-contrib-uglify": "^0.7.0",
